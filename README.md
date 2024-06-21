@@ -1,66 +1,19 @@
-## Foundry
+# Account/Scrpiting Examples 
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+To see the test pass using the work around, run:
 
-Foundry consists of:
-
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
+```bash
+forge test
 ```
 
-### Test
+To see the test fail, with the error, uncomment the code under `START IDEAL CODE` and before `END IDEAL CODE` and comment out the code under `START WORK AROUND` and before `END WORK AROUND`. Then run:
 
-```shell
-$ forge test
+```bash
+forge test
 ```
 
-### Format
-
-```shell
-$ forge fmt
+And you'll get:
+```
+[FAIL. Reason: no wallets are available] testGetV() (gas: 7961)
 ```
 
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
